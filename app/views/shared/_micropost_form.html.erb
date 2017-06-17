@@ -1,0 +1,36 @@
+<%= form_for(@micropost) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+  <!--
+    <textarea name="content" rows="10" cols="60">
+Title:
+Hosing Type:
+House Address:
+Housing Deposit:
+Monthly Fee:
+Other Description:
+    </textarea>
+    -->
+  
+    <%= f.text_area :content, placeholder: "Title:
+Hosing Type:
+House Address:
+Housing Deposit:
+Monthly Fee:
+Other Description:
+    " %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+  <span class="picture">
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+  </span>
+<% end %>
+
+<script type="text/javascript">
+  $('#micropost_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  });
+</script>
