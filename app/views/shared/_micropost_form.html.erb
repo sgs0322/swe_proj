@@ -11,13 +11,12 @@ Monthly Fee:
 Other Description:
     </textarea>
     -->
-  
-    <%= f.text_area :content, placeholder: "Title:
-Hosing Type:
-House Address:
-Housing Deposit:
-Monthly Fee:
-Other Description:
+    <%= f.text_area :title, placeholder: "Title", size: 10 %>
+    <%= f.text_area :housingtype, placeholder: "Housing Type", size: 10 %>
+    <%= f.text_area :address, placeholder: "Address", size: 20 %>
+    <%= f.text_area :deposit, placeholder: "Deposit", size: 10 %>
+    <%= f.text_area :fee, placeholder: "Monthly Fee", size: 20 %>
+    <%= f.text_area :content, placeholder: "Other Description
     " %>
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
