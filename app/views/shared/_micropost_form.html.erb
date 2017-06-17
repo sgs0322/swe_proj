@@ -1,16 +1,7 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-  <!--
-    <textarea name="content" rows="10" cols="60">
-Title:
-Hosing Type:
-House Address:
-Housing Deposit:
-Monthly Fee:
-Other Description:
-    </textarea>
-    -->
+  <h4> Post Here </h4>
     <%= f.text_area :title, placeholder: "Title", size: 10 %>
     <%= f.text_area :housingtype, placeholder: "Housing Type", size: 10 %>
     <%= f.text_area :address, placeholder: "Address", size: 20 %>
